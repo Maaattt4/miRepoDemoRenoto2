@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Primera pagina CSS</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Generalizar los tags ejemplo con p */
+        p {
+            color: green;
+            font-size: 20px;
+        }   
+        #HolaID {
+            font-weight: bold;
+            font-size: 30px;
+            color: purple;
+        }
+
+        .miClase {
+            background: crimson;
+        }
+
+        a,p {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 150px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Inline -->
+    <h1 style="color: blue; background: yellow;">Hola Mundo</h1>
+    <!-- Especificar saltandose el style -->
+    <p style="color: red">Bienvenido</p>
+    <!-- Estilos por ID -->
+    <p id="HolaID">Holaaaaaaaaaaa</p>
+    <!-- Estilos por clase -->
+    <p id="HolaID" class="miClase">Esto es una clase con ID</p>
+    <!-- Seleccionar varias tags -->
+    <a href="#">Esto es un enlace</a>
+</body>
+</html>
