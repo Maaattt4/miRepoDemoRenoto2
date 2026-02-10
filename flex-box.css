@@ -1,0 +1,79 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing : borde-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+html{
+    font-size: 12px;
+}
+
+
+h1{
+    text-align: center;
+    font-size: 6em;
+    opacity: 0.5;
+}
+
+
+.conteiner{
+    border: 5px solid black;
+    width: 800px;
+    height: 80%;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* flex-flow: row wrap; */
+    justify-content: center; /* Aliniar en main */
+    align-items: center; /* Alinear en cross */
+    align-content: center; /* Alinear en cross cuando hay varias filas */
+
+
+}
+
+
+.box {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    font-size: 4rem;
+    text-align: center;
+    flex-shrink: 1;
+
+}
+
+
+.uno{
+    background-color: lightblue;
+    flex-shrink: 3;
+
+}
+
+
+.dos{
+    background-color: lightcoral;
+    align-self: flex-start;
+}
+
+
+.tres{
+    background-color: lightcyan;
+}
+
+
+.cuatro{
+    background-color: lightgoldenrodyellow;
+}
+
+
+.cinco{
+    background-color: lightgray;
+    flex-grow: 2;
+}
+.seis{
+    background-color: lightgreen;
+    flex-grow: 1;
+}
