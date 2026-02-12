@@ -1,0 +1,25 @@
+i{
+    font-size: 250px;
+    color: seagreen;
+}
+
+.container{
+    background-color: blueviolet;
+    height: 600px;
+}
+
+.navbar{
+    padding: 2rem;
+    background-color: turquoise;
+}
+
+.navbar-collapse{
+    align-items: center;
+    justify-content:  space-between;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar-brand {
+        display: none;
+    }
+}
