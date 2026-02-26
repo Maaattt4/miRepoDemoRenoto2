@@ -1,0 +1,45 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(28, 72, 72);
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;    
+    height: 400px;
+    width: 400px;
+    background-color: aquamarine;
+}
+
+h1 {
+    color:blue;
+    font-size: 3em;
+}
+
+ul{
+    text-decoration: none;
+    list-style: none;
+}
+li {
+    margin: 10px;
+    font-size: 2em;
+    background-color: brown;
+    color: white;
+}
+
+.texto-marron{
+    color: brown;
+    
+}
