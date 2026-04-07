@@ -1,0 +1,38 @@
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="contenedor-principal">
+        <div class="logo-sitio">
+            <p>Gibran de Jesus Razo Toledo</p>
+        </div>
+        <div class="envoltura-ajustable">
+            <div class="encabezado">
+                <h2 class="titulo-proyecto">Selector de Rango de Precios</h2>
+            </div>
+            <div class="contenedor-inputs-precio">
+                <div class="entrada-precios">
+                    <div class="campo-precio">
+                        <span>Precio Mínimo</span>
+                        <input type="number" class="input-minimo" value="2500">
+                    </div>
+                    <div class="campo-precio">
+                        <span>Precio Máximo</span>
+                        <input type="number" class="input-maximo" value="8500">
+                    </div>
+                </div>
+                <div class="barra-desplazamiento">
+                    <div class="progreso-slider"></div>
+                </div>
+            </div>
+
+            <div class="entrada-rango">
+                <input type="range" class="rango-min" min="0" max="10000" value="2500" step="1">
+                <input type="range" class="rango-max" min="0" max="10000" value="8500" step="1">
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
