@@ -54,6 +54,4 @@ inputsRango.forEach((input) => {
         }
     });
 });
-
-// 5. El arranque inicial
 actualizarBarraVisual();
