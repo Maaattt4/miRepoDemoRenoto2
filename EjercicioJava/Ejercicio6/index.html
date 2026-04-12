@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestor de Gastos</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Gestor de Gastos</h1>
+        <form id="formulario-gastos">
+            <input type="text" id="nombre-gasto" placeholder="Nombre del Gasto" required />
+            <input type="number" id="monto-gasto" placeholder="Monto" required />
+            <select id="categoria-gasto" required>
+                <option value="" disabled selected>Seleccionar Categoría</option>
+                <option value="Comida">Comida</option>
+                <option value="Transporte">Transporte</option>
+                <option value="Entretenimiento">Entretenimiento</option>
+                <option value="Otros">Otros</option>
+            </select>
+            <input type="date" id="fecha-gasto" required />
+            <button type="submit">Agregar Gasto</button>
+        </form>
+        <div class="tabla-gastos">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Monto</th>
+                        <th>Categoría</th>
+                        <th>Fecha</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody id="lista-gastos"></tbody>
+            </table>
+            <div class="monto-total">
+                <strong>Total:</strong> $<span id="monto-total">0</span>
+            </div>
+        </div>
+        <div class="filtro">
+            <label for="filtrar-categoria">Filtrar por Categoría:</label>
+            <select id="filtrar-categoria">
+                <option value="Todas">Todas</option>
+                <option value="Comida">Comida</option>
+                <option value="Transporte">Transporte</option>
+                <option value="Entretenimiento">Entretenimiento</option>
+                <option value="Otros">Otros</option>
+            </select>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

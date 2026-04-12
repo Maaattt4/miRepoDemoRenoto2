@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario por Pasos Profesional</title>
+    <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' rel="stylesheet">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-11 col-sm-9 col-md-7 col-lg-6 col-xl-5 text-center p-0 mt-3 mb-2">
+                <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
+                    <form id="formulario-pasos">
+                        
+                        <div class="contenedor-indicadores">
+                            <ul id="barra-pasos">
+                                <li class="activo" id="paso1"><strong>Paso 1</strong></li>
+                                <li id="paso2"><strong>Paso 2</strong></li>
+                                <li id="paso3"><strong>Paso 3</strong></li>
+                                <li id="paso4"><strong>Paso 4</strong></li>
+                            </ul>
+                            <div class="progreso-atras">
+                                <div class="barra-relleno"></div>
+                            </div>
+                        </div>
+
+                        <fieldset>
+                            <h2>Bienvenido</h2>
+                            <p>Configura tu cuenta inicial.</p>
+                            <input type="button" class="boton-siguiente" value="Siguiente" />
+                        </fieldset>
+
+                        <fieldset>
+                            <h2>Perfil</h2>
+                            <p>Información personal.</p>
+                            <input type="button" class="boton-siguiente" value="Siguiente" />
+                            <input type="button" class="boton-anterior" value="Anterior" />
+                        </fieldset>
+
+                        <fieldset>
+                            <h2>Confirmación</h2>
+                            <p>Verifica tus datos.</p>
+                            <input type="button" class="boton-siguiente" value="Finalizar" />
+                            <input type="button" class="boton-anterior" value="Anterior" />
+                        </fieldset>
+
+                        <fieldset>
+                            <div class="finalizado">
+                                <h2 class="texto-verde"><strong>¡TERMINADO!</strong></h2>
+                                <p>Gracias por completar el formulario.</p>
+                            </div>
+                            <input type="button" class="boton-anterior" value="Regresar" />
+                        </fieldset>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

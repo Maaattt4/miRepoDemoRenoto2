@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 97vh;
+    background: #d4d2a5;
+    background-image: linear-gradient(to right, #61a4d0 0%, #2bb9b5 100%);
+    padding: 3em 0;
+    font-family: Arial, sans-serif;
+}
+
+h3 { text-align: center; }
+
+.botones-toast {
+    max-width: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin: 2em auto;
+}
+
+.fila-toast {
+    display: flex;
+    justify-content: center;
+    margin: 1em 0;
+    padding: 1rem;
+    flex-wrap: wrap;
+}
+
+button.boton-personalizado {
+    padding: 0.5rem 1rem;
+    border: none;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.785);
+    cursor: pointer;
+    width: 150px;
+    margin: 0.5em;
+    transition: filter 0.2s ease-in-out, transform 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    outline: none;
+}
+
+button.boton-personalizado:hover { filter: brightness(0.9); }
+
+button.boton-exito { background-color: #2ecc71; }
+button.boton-error { background-color: #e74c3c; }
+button.boton-info { background-color: #3498db; }
+button.boton-alerta { background-color: #f1c40f; }
+
+/* Estilos de la Notificación (Toast) */
+.notificacion {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    max-width: 300px;
+    background: #fff;
+    padding: 0.5rem;
+    border-radius: 4px;
+    box-shadow: -1px 1px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1023;
+    animation: entrarDesdeDerecha 0.3s ease-in-out forwards, desvanecer 0.5s ease-in-out forwards 3s;
+    transform: translateX(110%);
+}
+
+.progreso-toast {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background: #b7b7b7;
+    animation: progresoAnimacion 3s ease-in-out forwards;
+}
+
+.envoltura-contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icono-toast {
+    padding: 0.35rem 0.5rem;
+    font-size: 1.5rem;
+}
+
+.mensaje-toast {
+    flex: 1;
+    font-size: 0.9rem;
+    color: #000;
+    padding: 0.5rem;
+}
+
+/* Colores de estados */
+.notificacion.toast-exito { background: #95eab8; }
+.notificacion.toast-exito .progreso-toast { background-color: #2ecc71; }
+
+.notificacion.toast-error { background: #efaca5; }
+.notificacion.toast-error .progreso-toast { background-color: #e74c3c; }
+
+.notificacion.toast-info { background: #bddaed; }
+.notificacion.toast-info .progreso-toast { background-color: #3498db; }
+
+.notificacion.toast-alerta { background: #ead994; }
+.notificacion.toast-alerta .progreso-toast { background-color: #f1c40f; }
+
+@keyframes entrarDesdeDerecha {
+    0% { transform: translateX(110%); }
+    75% { transform: translateX(-10%); }
+    100% { transform: translateX(0%); }
+}
+
+@keyframes desvanecer {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@keyframes progresoAnimacion {
+    0% { width: 100%; }
+    100% { width: 0%; }
+}

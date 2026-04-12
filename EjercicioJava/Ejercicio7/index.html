@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="style.css" rel="stylesheet" />
+    <title>Tabla Personalizada</title>
+</head>
+<body>
+    <div class="raiz">
+        <h1>Tabla Personalizada</h1>
+        <div class="formulario">
+            <div>
+                <h2 id="tituloFormulario">Agregar elemento</h2>
+            </div>
+            <input type="text" id="entradaNombre" placeholder="Ingrese Nombre" title="Escriba un nombre" value="" />
+            <input type="text" id="entradaCategoria" value="" placeholder="Ingrese Categoría" title="Escriba una categoría" />
+            <input type="number" id="entradaAnio" value="" placeholder="Ingrese año" title="Escriba un año" />
+            <button id="enviarElemento" type="button" onclick="enviarElemento()">
+                Agregar
+            </button>
+            <button id="editarElemento" style="display: none" onclick="actualizarElemento()">
+                Actualizar
+            </button>
+        </div>
+
+        <h2>Buscar elemento...</h2>
+        <input type="text" id="entradaBusqueda" onkeyup="buscarElementos()" placeholder="Buscar por nombres.." title="Escriba un nombre" />
+
+        <table id="tabla">
+            <tr class="titulos">
+                <th style="width: 5%">N°</th>
+                <th style="width: 30%" id="nombre" onclick="ordenarElementos('nombre')">
+                    Nombre
+                </th>
+                <th style="width: 30%" onclick="ordenarElementos('categoria')">
+                    Categoría
+                </th>
+                <th style="width: 10%" onclick="ordenarElementos('anio')">
+                    Año
+                </th>
+                <th style="width: 2%">Editar</th>
+                <th style="width: 2%">Eliminar</th>
+            </tr>
+        </table>
+        <script src="script.js"></script>
+    </div>
+</body>
+</html>

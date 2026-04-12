@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Notas</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Calculadora de Notas</h1>
+        <div class="cuerpo-pantalla">
+            <div class="app">
+                <div class="grupo-formulario">
+                    <input type="text" class="control-formulario" placeholder="QUÍMICA" id="quimica" />
+                </div>
+                <div class="grupo-formulario">
+                    <input type="text" class="control-formulario" placeholder="LENGUA" id="lengua" />
+                </div>
+                <div class="grupo-formulario">
+                    <input type="text" class="control-formulario" placeholder="MATEMÁTICAS" id="matematicas" />
+                </div>
+                <div class="grupo-formulario">
+                    <input type="text" class="control-formulario" placeholder="FÍSICA" id="fisica" />
+                </div>
+                <div>
+                    <input type="button" value="Mostrar Porcentaje" class="boton-formulario" onclick="calcular()" />
+                </div>
+            </div>
+        </div>
+        <div class="grupo-formulario">
+            <p id="datos-resultado"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
