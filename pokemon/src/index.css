@@ -1,0 +1,181 @@
+/* Reset general para centrar la carta en pantalla */
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #1a1a1a; /* Fondo oscuro para que la carta resalte */
+  font-family: 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Contenedor principal: El borde dorado de la carta */
+.pokemon-card {
+  width: 320px;
+  height: 460px;
+  background: linear-gradient(135deg, #f3d459 0%, #e2b400 50%, #f3d459 100%);
+  border-radius: 15px;
+  padding: 12px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #9c7b00;
+  position: relative;
+  transition: transform 0.4s ease;
+  cursor: pointer;
+}
+
+.pokemon-card:hover {
+  transform: scale(1.03) rotateY(5deg);
+}
+
+/* Cabecera: Nombre y HP */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5px 2px 5px;
+}
+
+.stage { font-size: 0.65rem; font-weight: bold; font-style: italic; color: #444; }
+.name { 
+  margin: 0; 
+  text-transform: capitalize; 
+  font-size: 1.3rem; 
+  font-weight: bold;
+  color: #222;
+  flex-grow: 1;
+  margin-left: 5px;
+}
+.hp { color: #d32f2f; font-weight: bold; font-size: 1.1rem; }
+
+/* Marco de la imagen (Estilo holográfico/metálico) */
+.image-container {
+  background: linear-gradient(145deg, #aebcc1, #e8eff0);
+  border: 4px solid #999;
+  box-shadow: inset 0 0 15px rgba(0,0,0,0.3);
+  height: 190px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2px 0;
+}
+
+.image-container img {
+  width: 170px;
+  filter: drop-shadow(0 8px 12px rgba(0,0,0,0.4));
+}
+
+/* Área de información y datos */
+.card-body {
+  background: rgba(255, 255, 255, 0.85);
+  flex-grow: 1;
+  border-radius: 2px;
+  border: 1px solid #c2a000;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-bar {
+  background: linear-gradient(to right, #ccc, #eee, #ccc);
+  font-size: 0.6rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 8px;
+  padding: 1px 0;
+  border: 0.5px solid #999;
+}
+
+.stats-section {
+  font-size: 0.85rem;
+  color: #333;
+  line-height: 1.4;
+}
+
+.stats-section p {
+  margin: 4px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+}
+
+.type-badge {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #555;
+}
+
+.flavor-text {
+  margin-top: auto;
+  font-size: 0.65rem;
+  font-style: italic;
+  color: #555;
+  text-align: center;
+  line-height: 1.1;
+  padding-top: 5px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.5rem;
+  font-weight: bold;
+  margin-top: 4px;
+  color: #222;
+}
+
+/* Contenedor del título y el grupo */
+.deck-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  width: 100%;
+}
+
+.deck-title {
+  color: #ffcb05;
+  text-shadow: 2px 2px 0 #3b4cca;
+  font-size: 3rem;
+  margin-bottom: 30px;
+  font-family: 'Arial Black', sans-serif;
+}
+
+/* Ajuste de la cuadrícula para más cartas */
+.pokemon-grid {
+  display: grid;
+  /* 4 columnas en pantallas grandes */
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 20px; 
+  max-width: 1400px; /* Ampliamos el ancho máximo */
+  margin: 0 auto;
+}
+
+/* Reducimos un poco el tamaño de la carta para que quepan más */
+.pokemon-card {
+  width: 260px; /* Antes era 320px */
+  height: 380px; /* Antes era 460px */
+  padding: 10px;
+}
+
+.image-container {
+  height: 140px; /* Ajustamos el marco de la imagen */
+}
+
+.image-container img {
+  width: 130px;
+}
+
+/* Responsivo para 20 cartas */
+@media (max-width: 1200px) {
+  .pokemon-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 900px) {
+  .pokemon-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .pokemon-grid { grid-template-columns: 1fr; }
+}
