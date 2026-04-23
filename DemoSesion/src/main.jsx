@@ -1,8 +1,8 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import AppCoockie from './cookiesSesion/AppCoockie.jsx';
+import AppCookieHttpOnly from './cookieHttOnly/AppCookieHttpOnly';
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <AppCoockie />
+    <AppCookieHttpOnly />
   </StrictMode>,
 )
