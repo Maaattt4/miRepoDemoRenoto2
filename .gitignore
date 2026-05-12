@@ -2,3 +2,30 @@ node_modules/
 node_modules
 frontBackEnd/node_modules/
 frontBackEnd/node_modules
+
+# Dependencias (las más pesadas)
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Logs de errores de npm/pnpm/yarn
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Archivos del editor de código (VS Code, IntelliJ)
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+
+# Archivos del sistema
+.DS_Store
+thumbs.db
+
+# Si tienes carpetas específicas de otros proyectos en el mismo repo
+frontBackEnd/node_modules/
